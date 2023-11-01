@@ -1,1 +1,43 @@
 
+#blockAcceuil {
+  margin: 10%;
+}
+
+#titleAcceuil {
+  font-size: 7vw;
+}
+
+#subtitleAcceuil {
+  font-size: 4vw;
+}
+
+#blockAbout {
+  margin: 10%;
+}
+
+#blockAbout p {
+  line-height: 2rem;
+}
+
+#blockTitle2 {
+  margin: 2%;
+	display: grid;
+	border: 3px solid;
+  border-image: linear-gradient(90deg, rgba(144,84,189,0) 0%, rgba(13,110,253,1) 0%, rgba(13,110,253,1) 100%, rgba(163,82,175,0) 100%) 0 0 1 0;
+}
+
+@media (min-width: 700px) { 
+  
+  #titleAcceuil {
+    font-size: 5vw;
+  }
+
+  #subtitleAcceuil {
+    font-size: 2vw;
+  }
+
+  #blockAcceuil {
+    margin: 15%;
+  }
+
+}
