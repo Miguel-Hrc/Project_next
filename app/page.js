@@ -1,5 +1,10 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import backgroundImage from './assets/backgroundImage.jpg'
+import JohnDoe from './assets/JohnDoe.jpg'
+import black from './assets/black.jpg'
+import Link from 'next/link'
+
 
 export const metadata = {
   title: 'John Doe',
@@ -9,6 +14,95 @@ export const metadata = {
 export default function Home() {
   return (
     <main className={styles.main}>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark" style={{paddingLeft: "4vw",}}>
+          <div className="container-fluid" >
+            <a className="navbar-brand col-lg-5 col-xl-6 col-xxl-7 fs-3" href="/">JOHN DOE</a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div className="navbar-nav col-lg-7 col-xl-6 col-xxl-5">
+                <Link className="nav-link active fs-6" style={{paddingLeft: "1.5vw",}} aria-current="page" href="/">ACCUEIL</Link>
+                <Link className="nav-link fs-6" style={{paddingLeft: "1.5vw",}} href="/Service">SERVICES</Link>
+                <Link className="nav-link fs-6" style={{paddingLeft: "1.5vw",}} href="/Realisation">RÉALISATIONS</Link>
+                <Link className="nav-link fs-6" style={{paddingLeft: "1.5vw",}} href="/Blog">BLOG</Link>
+                <Link className="nav-link fs-6 text-nowrap" style={{paddingLeft: "1.5vw",}} href="/Contact">ME CONTACTER</Link>
+              </div>
+            </div>
+          </div>
+      </nav>
+      <div className="card text-bg-dark">
+        <Image className="card-img" 
+          src={backgroundImage}
+          alt="Picture of the author"
+          sizes="100vw"
+          style={{
+            width: '100vw',
+            height: 'auto',
+            position: 'absolute',
+          }}
+        />
+        <Image className="card-img"
+          src={black}
+          alt="Picture of the author"
+          sizes="100%"
+          style={{
+            width: '100vw',
+            height: 'auto',
+            position: 'relative',
+            opacity: "0.3",
+          }}
+        />
+        <div className="card-img-overlay text-center grid row-gap-3" id="blockAcceuil">
+          <h1 className="card-title" id="titleAcceuil" style={{ color: 'white'}}>Bonjour, je suis John Doe</h1>
+          <p className="card-text"  id="subtitleAcceuil">Développeur full stack</p>
+          <Link className="nav-link" aria-current="page" href="/Github">
+            <button type="button" className="btn btn-primary">En savoir plus</button>
+          </Link>
+        </div>
+      </div>
+      <div className="row shadow-lg p-3 mb-5 bg-body-tertiary rounded" id="blockAbout">
+        <div className="col-lg-6">
+            <div id="blockTitle2"> 
+                <h2>À propos</h2>
+            </div>  
+            <p>Passionné par l'informatique et les nouvelles technologies, j'ai suivi une formation d'<strong>intégrateur-développeur web</strong> au CEF. Au cours de cette formation, j'ai pu acquérir des bases solides pour travailler dans le domaine du <strong>développement web.</strong></p>
+            <p>Basé à Lyon,je suis en recherche d'une alternance au sein d'une agence digitale pour consolider ma formation de <strong>développeur web full stack.</strong></p>
+            <p>J'accorde une attention particulière à la qualité du code que j'écris et je respecte les bonnes pratiques du web.</p>
+        </div>
+        <div className="col-lg-6">
+          <Image className="card-img"
+            src={JohnDoe}
+            alt="Picture of the author"
+            sizes="100vw"
+            style={{
+              width: '35vw',
+              height: 'auto',
+            }}
+          />
+          <h3>Mes compétences</h3>
+          <p>HTML5 90%</p>
+          <div className="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+          <div className="progress-bar bg-success" style={{width: "90%",}}></div>
+          </div>
+          <p>CSS3 80%</p>
+          <div className="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div className="progress-bar bg-info" style={{width: "80%",}}></div>
+          </div>
+          <p>JAVASCRIPT 70%</p>
+          <div className="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div className="progress-bar bg-warning" style={{width: "70%",}}></div>
+          </div>
+          <p>PHP 60%</p>
+          <div className="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+            <div className="progress-bar bg-danger" style={{width: "60%",}}></div>
+          </div>
+          <p>REACT 50%</p>
+          <div className="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+            <div className="progress-bar bg-striped" style={{width: "50%",}}></div>
+          </div>
+        </div>
+      </div>
     </main>
   )
 }
