@@ -1,1 +1,32 @@
 
+.main {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  color: #444;
+}
+
+.main h1 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.main h2 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.main h4 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.main h5 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+
