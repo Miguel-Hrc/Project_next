@@ -4,6 +4,11 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import "bootstrap/dist/css/bootstrap.min.css"
+import Link from 'next/link'
+import GitHub from './assets/logoGitHub.png'
+import Linkedin from './assets/logoLinkedin.png'
+import Twitter from './assets/logoTwitter.png'
+import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +23,99 @@ export default function RootLayout({ children }) {
       <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&display=swap" rel="stylesheet" />
       </Head>
       <body className={inter.className}>{children}
+      <footer>
+          <div className="shadow-lg p-6 mb-5 bg-body-tertiary rounded">
+            <div className="card-body row ">
+              <div className="col-lg-3" style={{padding: "4vw",}}>
+                <h5>John Doe</h5>
+                <adress>
+                  <p className="lien"> 
+                      <a href="https://www.google.com/maps/place/40+Rue+Laure+Diebold,+69009+Lyon/@45.778662,4.7989789,17z/data=!3m1!4b1!4m6!3m5!1s0x47f4eb65edac5b3f:0xe01c47049cb2e2b9!8m2!3d45.778662!4d4.7989789!16s%2Fg%2F11c24790th?entry=ttu"
+                        target="_blank"  
+                        title="Lien adresse IRL"
+                        class="lien">
+                        40 Rue Laure Diebold<br />69009 Lyon, France<br />
+                      </a>
+                  </p>
+                  <p className="lien">Téléphone :&nbsp;
+                    <a href="tel:0620304050" 
+                      title="Lien numéro de téléphone"
+                      class="lien"
+                      target="_blank"
+                      >
+                      06 20 30 40 50
+                    </a>
+                  </p>
+                </adress>
+                <Link href="https://github.com/Miguel-Hrc"
+                target="_blank" >
+                    <Image className="card-img z-n1"
+                      src={GitHub}
+                      alt="Picture of the author"
+                      sizes="100vw"
+                      style={{
+                        width: '65px',
+                        height: 'auto',
+                      }}
+                    />
+                </Link>
+                <Link href="https://www.linkedin.com/school/centre-europeen-de-formation/"
+                target="_blank" >
+                  <Image className="card-img"
+                    src={Linkedin}
+                    alt="Picture of the author"
+                    sizes="100vw"
+                    style={{
+                      width: '60px',
+                      height: 'auto',
+                    }}
+                  />
+                </Link>
+                <Link href="https://twitter.com/CEFormation/status/1534167987749535744"
+                target="_blank" >
+                  <Image className="card-img"
+                    src={Twitter}
+                    alt="Picture of the author"
+                    sizes="100vw"
+                    style={{
+                      width: '65px',
+                      height: 'auto',
+                    }}
+                  />
+                </Link>
+              </div>
+              <div className="col-lg-3" style={{padding: "4vw",}}>
+                <h5>Liens utiles</h5>
+                <ul> 
+                  <li><Link className="lien" aria-current="page" href="/"> Acceuil</Link></li>
+                  <li><Link className="lien" aria-current="page" href="/"> A propos</Link></li>
+                  <li><Link className="lien" href="/Service"> Services</Link></li>
+                  <li><Link className="lien" href="/Contact"> Me contacter</Link></li>
+                  <li><Link className="lien" href="/Mention"> Mentions légales</Link></li>
+                </ul>
+              </div>
+              <div className="col-lg-3" style={{padding: "4vw",}}>
+                <h5>Mes dernières réalisations</h5>
+                <ul> 
+                  <li><Link className="lien" href="/Realisation"> Fresh Food</Link></li>
+                  <li><Link className="lien" href="/Realisation"> Restaurant Akira</Link></li>
+                  <li><Link className="lien" href="/Realisation"> Espace bien-être</Link></li>
+                </ul>
+              </div>
+              <div className="col-lg-3" style={{padding: "4vw",}}>
+                <h5>Mes derniers articles</h5>
+                <ul> 
+                  <li><Link className="lien" href="/Blog"> Coder son site en HTML/CSS</Link></li>
+                  <li><Link className="lien" href="/Blog"> Vendre ses produits sur le web</Link></li>
+                  <li><Link className="lien" href="/Blog"> Se positionner sur Google</Link></li>
+                </ul>
+              </div>
+            </div>
+            <div id="footer" style={{padding: "1px"}}>
+                <p className="d-flex justify-content-center">Ⓒ Designed by John Doe</p>
+            </div>
+        </div>
+      </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
       </body>
     </html>
