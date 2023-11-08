@@ -81,7 +81,7 @@ export default function Mention() {
                       height: 'auto',
                     }}
                 />
-                <p style={{paddingLeft: "1.5vw"}}><a href="https://vercel.com/ style={{textDecoration: 'none',color: '#0d6efd', fontWeight: 'bold',}}>www.vercel.com</a></p>
+                <p style={{paddingLeft: "1.5vw"}}><a href="https://vercel.com/" style={{textDecoration: 'none',color: '#0d6efd', fontWeight: 'bold',}}>www.vercel.com</a></p>
               </div>
             </div>
           </div>
