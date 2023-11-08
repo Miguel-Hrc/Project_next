@@ -71,7 +71,7 @@ export default function Mention() {
             </h2>
             <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div className="accordion-body">
-              <h4>Netlify</h4>
+              <h4>Vercel</h4>
                 <Image class="float-start"
                     src={world}
                     alt="Picture of the author"
@@ -81,7 +81,7 @@ export default function Mention() {
                       height: 'auto',
                     }}
                 />
-                <p style={{paddingLeft: "1.5vw"}}><a href="https://www.netlify.com/" style={{textDecoration: 'none',color: '#0d6efd', fontWeight: 'bold',}}>www.netlify.com</a></p>
+                <p style={{paddingLeft: "1.5vw"}}><a href="https://www.netlify.com/" style={{textDecoration: 'none',color: '#0d6efd', fontWeight: 'bold',}}www.vercel.com</a></p>
               </div>
             </div>
           </div>
